@@ -5,3 +5,22 @@ authors = ["Karsten Gebbert <k@ioctl.it>"]
 edition = "2018"
 
 [dependencies]
+quickcheck = "0.8"
+criterion = "0.2"
+rand = "0.6"
+
+[[bin]]
+name = "arc-mutex-vec"
+doc = false
+
+[[bin]]
+name = "mspc-queue"
+doc = false
+
+[[bench]]
+name = "arc-mutex-vec"
+harness = false
+
+[[bench]]
+name = "mspc-queue"
+harness = false

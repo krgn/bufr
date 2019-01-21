@@ -10,6 +10,9 @@ from a socket in a loop into a `BufrRef`, then send copies of that ref
 (possibly wrapped in `Arc`) to worker threads wherer it gets send to
 different destinations.
 
+Only when all threads successfully sent-off the underlying buffer it
+gets dropped and returned to the pool for reuse.
+
 This little example project is just for keeping track of that pattern,
 possibly for future use in some networking server code.
 
